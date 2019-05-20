@@ -32,7 +32,7 @@ resource "azurerm_network_security_group" "customernsg" {
   resource_group_name = "${azurerm_resource_group.customerrg.name}"
 
   security_rule {
-    name                       = "RDP"
+    name                       = "SSH"
     priority                   = 100
     direction                  = "Inbound"
     access                     = "Allow"
