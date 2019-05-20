@@ -166,7 +166,7 @@ resource "azurerm_network_interface" "s01nic" {
 }
 resource "azurerm_public_ip" "managevmpip" {
     name                         = "${var.customer_name}-managevmpip"
-    location                     = "${var.customer_name}"
+    location                     = "${azurerm_resource_group.customerrg.location}"
     resource_group_name          = "${azurerm_resource_group.customerrg.name}"
     allocation_method            = "Dynamic"
 
